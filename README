@@ -1,0 +1,5 @@
+1. install node js
+2. install mongodb
+3. modify conf.json
+4. npm install
+4. start by npm start

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="xinyou">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/yx.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/angular-touch.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/ui-bootstrap-tpls.min.js"></script>
+</head>
+
+<body>
+  <div ng-controller="SearchController">
+    <div yx-nav></div>
+    <div class="container">
+      <div yx-input></div>
+      <div yx-results ng-show="showView(1)"></div>
+      <div yx-info ng-show="showView(2)"></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/app-controller.js"></script>
+  <script type="text/javascript" src="js/app-directive.js"></script>
+</body>
+
+</html>

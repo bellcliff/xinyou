@@ -1,0 +1,12 @@
+{
+  "http": {
+    "port": 8890
+  },
+  "_se_comment": "current use the service on 219",
+  "se": {
+  	"host": "219.239.89.185:8889",
+  	"port": 8889
+  },
+  "_mongo_comment": "default use local host with default port",
+  "mongo": {}
+}

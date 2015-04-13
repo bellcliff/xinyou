@@ -1,0 +1,14 @@
+#searchStats {
+    line-height: 43px;
+    color: #808080;
+}
+
+@media screen and (max-width: 640px) {
+    .gl-content img {
+        max-width: 100%;
+    }
+    .mobile-hidden {
+        visibility: hidden;
+        display: none;
+    }
+}

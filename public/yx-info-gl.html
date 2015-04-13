@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">游戏攻略</div>
+  </div>
+  <div class="panel-body">
+    <h4>{{result.name}}</h4>
+    <div ng-bind-html="result.contentSafe" class="gl-content"></div>
+  </div>
+  <div class="panel-footer">
+    <a class="btn btn-info" href="{{result.url}}">原始链接</a>
+    <span class="label label-default">{{result.summary}}</span>
+  </div>
+</div>

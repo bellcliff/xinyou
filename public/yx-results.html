@@ -1,0 +1,25 @@
+<div id="searchStats">
+  <span>About {{results.totalnum}} results.</span>
+</div>
+<div ng-show="results && results.totalnum > 0">
+  <table class="table">
+    <tr class="row">
+      <th class="col-sm-4 col-md-2">游戏</th>
+      <th class="col-sm-8 col-md-6">简介</th>
+      <th class="mobile-hidden">平台</th>
+      <th class="mobile-hidden">发布日期</th>
+      <th class="mobile-hidden">tag</th>
+      <th class="mobile-hidden"></th>
+    </tr>
+    <tr class="row" ng-repeat="item in results.data" ng-click="viewInfo(item.id, querydb)">
+      <td class="col-sm-4 col-md-2">{{item.name | limitTo: 25}}</td>
+      <td class="col-sm-8 col-md-6">{{item.brief | limitTo: 50}}</td>
+      <td class="mobile-hidden">{{item.platform}}</td>
+      <td class="mobile-hidden">{{item.pubdate}}</td>
+      <td class="mobile-hidden">{{item.tag}}</td>
+      <td class="mobile-hidden"><a class="btn btn-default">查看</a></td>
+    </tr>
+  </table>
+  <!-- pagination -->
+  <pagination total-items="results.totalnum" max-size="5" items-per-page="numPerPage" ng-model="currentPage"></pagination>
+</div>

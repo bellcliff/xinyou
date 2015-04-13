@@ -1,0 +1,56 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">{{result.name}}</div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <img ng-src="{{result.imgURL}}" class="img-responsive center-block">
+      </div>
+      <div class="col-xs-6 col-md-2" ng-show="result.tag.length>0">
+        <div>游戏类型:</div>
+        <span class="label label-info" style="font-size:1.2em;margin:10px 0 0 5px;display:block;" ng-repeat="tag in result.tag.split(',')">{{tag}}</span>
+      </div>
+      <div class="col-xs-6 col-md-2" ng-show="result.platform.length>0">
+        <div>游戏平台:</div>
+        <span class="label label-info" style="font-size:1.2em;margin:10px 0 0 5px;display:block;" ng-repeat="tag in result.platform.split(',')">{{tag}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      游戏简介
+    </div>
+  </div>
+  <div class="panel-body">
+    <div><span>{{result.brief}}</span></div>
+  </div>
+</div>
+<div class="panel panel-default" ng-show="result.slides.length > 0">
+  <div class="panel-heading">
+    <div class="panel-title">
+      游戏截图
+    </div>
+    <div class="panel-body">
+      <div class="col-md-offset-2 col-md-8 col-xs-12">
+        <carousel>
+          <slide ng-repeat="slide in result.slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+          </slide>
+        </carousel>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default" ng-show="result.gls && result.gls.data && result.gls.data.length > 0">
+  <div class="panel-heading">
+    <div class="panel-title">攻略推荐</div>
+  </div>
+  <div class="panel-body">
+    <div class="list-group">
+      <a class="list-group-item" ng-repeat="gl in result.gls.data" ng-click="viewInfo(gl.id, 'gonglv')">{{gl.name}}</a>
+    </div>
+  </div>
+</div>
